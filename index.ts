@@ -36,9 +36,16 @@ function showReviewTotal (value: number, reviewer: string, isLoyaltyUser: boolea
 
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
-const you = {
-    userName: 'Thando',
+const you: {
+    firstName: string;
+    lastName: string;
+    isReturning: boolean;
+    age: number;
+} = {
+    firstName: 'Thando',
+    lastName: 'Chibi',
     isReturning: true,
+    age: 20,
 }
 
 
