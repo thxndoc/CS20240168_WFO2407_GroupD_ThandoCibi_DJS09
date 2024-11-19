@@ -63,7 +63,7 @@ const properties : {
     isAvailable: boolean;
 }[] = [
     {
-        image: '',
+        image: './images/apartment.jpg',
         title: 'Jozi Retreat',
         price: 50,
         location: {
@@ -76,7 +76,7 @@ const properties : {
         isAvailable: true   
     },
     {
-        image: '',
+        image: './images/cabin.jpg',
         title: 'Creative Cabin',
         price: 45,
         location: {
@@ -89,7 +89,7 @@ const properties : {
         isAvailable: false 
     },
     {
-    image: '',
+    image: './images/tiny-home.jpg',
     title: 'Luxe Tiny Home',
     price: 60,
     location: {
