@@ -30,8 +30,8 @@ const reviews: any[] = [
         name: 'Omar',
         stars: 4,
         loyaltyUser: LoyaltyUser.SILVER_USER,
-        date: '27-03-2021'
-        description: 'Great hosts, location was a bit further than said',
+        date: '27-03-2021',
+        description: 'Great hosts, location was a bit further than said'
     },
 ]
 
@@ -109,6 +109,18 @@ const properties : {
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 populateUser(you.isReturning, you.firstName)
+
+let authorityStatus : any
+
+isLoggedIn = true
+
+function showDetails(authorityStatus: boolean | Permissions, element : HTMLDivElement, price: number) {
+   if (authorityStatus) {
+       const priceDisplay = document.createElement('div')
+       priceDisplay.innerHTML = price.toString() + '/night'
+       element.appendChild(priceDisplay)
+   }
+}
 
 // add properties
 properties.forEach(property => {
