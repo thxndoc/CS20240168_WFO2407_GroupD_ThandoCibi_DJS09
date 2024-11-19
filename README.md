@@ -1,5 +1,11 @@
 # DJS09: Couch Surfing | Typescript Practice
+Image credit:<br>
+- Photo by [Evan Leith](https://unsplash.com/@jevanleith?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/brown-wooden-cabin-in-forest-8ZmwIbjOa9o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
+- Photo by [Hannah Busing](https://unsplash.com/@hannahbusing?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/photo-of-living-room-U-k6XLlml1I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+
+- Photo by [Thomas Werneken](https://unsplash.com/@thomaswerneken?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-small-cabin-in-the-woods-KtF1W6-znVk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+      
 ## Challenge Overview
 
 Are you ready to get stuck into some Typescript? For this challenge, you are required to code along with the lecturer from this lesson:  Couch Surfing Website
