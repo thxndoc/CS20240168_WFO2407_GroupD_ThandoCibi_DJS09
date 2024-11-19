@@ -48,6 +48,25 @@ const you: {
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
 }
 
+// properties
+const properties : {
+    image: string;
+    title: string;
+    price: number;
+    location: {
+        firstLine: string;
+        city: string;
+        postcode: number;
+        country: string;
+    };
+    contact: string; // email
+    isAvailable: boolean;
+}[] = [
+    {
+        
+    }
+]
+
 // functions
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
