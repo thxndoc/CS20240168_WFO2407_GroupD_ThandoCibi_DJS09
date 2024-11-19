@@ -2,6 +2,8 @@
 // Write a function that will only accept numbers and attend to 
 // all TypeScript weakness flags.
 // : number
+const propertyContainer = document.querySelector('.properties')
+
 import { showReviewTotal, populateUser } from './utils'
 let isOpen: boolean
 
@@ -107,3 +109,16 @@ const properties : {
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 populateUser(you.isReturning, you.firstName)
+
+// add properties
+properties.forEach(property => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.innerHTML = property.title;
+
+    const image = document.createElement('img');
+    image.setAttribute('src', property.image);
+
+    card.appendChild(image);
+    propertyContainer.appendChild(card);
+});
