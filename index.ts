@@ -63,8 +63,44 @@ const properties : {
     isAvailable: boolean;
 }[] = [
     {
-        
-    }
+        image: '',
+        title: 'Jozi Retreat',
+        price: 50,
+        location: {
+            firstLine: 'unit 42',
+            city: 'Johannesburg',
+            postcode: 1745,
+            country: 'South Africa'
+        },
+        contact: 'thabiso@gmail.com',
+        isAvailable: true   
+    },
+    {
+        image: '',
+        title: 'Creative Cabin',
+        price: 45,
+        location: {
+            firstLine: 'no 14',
+            city: 'Mbombela',
+            postcode: 1234,
+            country: 'South Africa'
+        },
+        contact: 'monica@yahoo.com',
+        isAvailable: false 
+    },
+    {
+    image: '',
+    title: 'Luxe Tiny Home',
+    price: 60,
+    location: {
+        firstLine: 'unit 50',
+        city: 'Cape Town',
+        postcode: 87876,
+        country: 'South Africa'
+    },
+    contact: 'john@gmail.com',
+    isAvailable: true
+}
 ]
 
 // functions
