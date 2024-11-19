@@ -3,6 +3,7 @@
 // all TypeScript weakness flags.
 // : number
 const propertyContainer = document.querySelector('.properties')
+const footer = document.querySelector('.footer')
 
 import { showReviewTotal, populateUser } from './utils'
 let isOpen: boolean
@@ -122,3 +123,6 @@ properties.forEach(property => {
     card.appendChild(image);
     propertyContainer.appendChild(card);
 });
+
+let currentLocation: [string, string, number] = ['Johannesburg', '20:30', 21]
+footer.innerHTML = `${currentLocation[0]} ${currentLocation[1]} ${currentLocation[2]}℃`
