@@ -61,7 +61,7 @@ const properties : {
         postcode: number;
         country: string;
     };
-    contact: string; // email
+    contact: [number, string];
     isAvailable: boolean;
 }[] = [
     {
@@ -74,7 +74,7 @@ const properties : {
             postcode: 1745,
             country: 'South Africa'
         },
-        contact: 'thabiso@gmail.com',
+        contact: [+271234567890,'thabiso@gmail.com'],
         isAvailable: true   
     },
     {
@@ -87,7 +87,7 @@ const properties : {
             postcode: 1234,
             country: 'South Africa'
         },
-        contact: 'monica@yahoo.com',
+        contact: [+271234567890, 'monica@yahoo.com'],
         isAvailable: false 
     },
     {
@@ -100,7 +100,7 @@ const properties : {
         postcode: 87876,
         country: 'South Africa'
     },
-    contact: 'john@gmail.com',
+    contact: [+271234567890, 'john@gmail.com'],
     isAvailable: true
 }
 ]
