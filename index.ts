@@ -4,7 +4,6 @@
 // : number
 import { showReviewTotal, populateUser, getTopTwoReviews } from './utils' // multiple exports - import exactly as is in file
 import { Permissions, LoyaltyUser } from './enums' 
-import { Price, Country } from './types'
 import { Review, Property } from './interfaces' 
 
 const propertyContainer = document.querySelector('.properties')
