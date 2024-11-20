@@ -5,6 +5,7 @@
 import { showReviewTotal, populateUser, getTopTwoReviews } from './utils' // multiple exports - import exactly as is in file
 import { Permissions, LoyaltyUser } from './enums' 
 import { Review, Property } from './interfaces' 
+import MainImage from './classes' // single export - export default
 
 const propertyContainer = document.querySelector('.properties')
 const reviewContainer = document.querySelector('.reviews')
@@ -154,17 +155,6 @@ button.addEventListener('click', () => addReviews(reviews))
 let currentLocation: [string, string, number] = ['Johannesburg', '20:30', 21]
 footer.innerHTML = `${currentLocation[0]} ${currentLocation[1]} ${currentLocation[2]}℃`
 
-// classes
-class MainImage {
-    src: string
-    title: string
-    reviews: Review[]
-    constructor(src: string, title: string, reviews: Review[]) {
-        this.src = src
-        this.title = title
-        this.reviews = reviews
-    }
-}
 
 let yourMainImage = new MainImage(
     './images/modern-mansion.jpg', 
