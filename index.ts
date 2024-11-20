@@ -4,14 +4,14 @@
 // : number
 import { showReviewTotal, populateUser } from './utils'
 import { Permissions, LoyaltyUser } from './enums'
+import { Price, Country } from './types'
 
 const propertyContainer = document.querySelector('.properties')
 const footer = document.querySelector('.footer')
 
 let isOpen: boolean
-
-
-    
+let isLoggedIn: boolean
+   
 // reviews
 const reviews: any[] = [
     {
@@ -36,15 +36,10 @@ const reviews: any[] = [
 ]
 
 // user
-const you: {
-    firstName: string;
-    lastName: string;
-    isReturning: boolean;
-    age: number;
-    stayedAt: string[];
-} = {
+const you = {
     firstName: 'Thando',
     lastName: 'Chibi',
+    permissions: Permissions.ADMIN,
     isReturning: true,
     age: 20,
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
@@ -59,7 +54,7 @@ const properties : {
         firstLine: string;
         city: string;
         postcode: number;
-        country: string;
+        country: Country;
     };
     contact: [number, string];
     isAvailable: boolean;
@@ -67,7 +62,7 @@ const properties : {
     {
         image: './images/apartment.jpg',
         title: 'Jozi Retreat',
-        price: 50,
+        price: 42,
         location: {
             firstLine: 'unit 42',
             city: 'Johannesburg',
@@ -80,7 +75,7 @@ const properties : {
     {
         image: './images/cabin.jpg',
         title: 'Creative Cabin',
-        price: 45,
+        price: 30,
         location: {
             firstLine: 'no 14',
             city: 'Mbombela',
@@ -93,7 +88,7 @@ const properties : {
     {
     image: './images/tiny-home.jpg',
     title: 'Luxe Tiny Home',
-    price: 60,
+    price: 25,
     location: {
         firstLine: 'unit 50',
         city: 'Cape Town',
@@ -133,6 +128,7 @@ properties.forEach(property => {
 
     card.appendChild(image);
     propertyContainer.appendChild(card);
+    showDetails(you.permissions, card, property.price)
 });
 
 let currentLocation: [string, string, number] = ['Johannesburg', '20:30', 21]
