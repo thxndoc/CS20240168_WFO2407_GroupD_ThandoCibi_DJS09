@@ -3,11 +3,14 @@
 // all TypeScript weakness flags.
 // : number
 import { showReviewTotal, populateUser, getTopTwoReviews } from './utils' // multiple exports - import exactly as is in file
-import { Permissions, LoyaltyUser } from './enums' // same as above comment - multiple exports
+import { Permissions, LoyaltyUser } from './enums' 
 import { Price, Country } from './types'
-import Review from './interfaces' // export default - can name it whatever
+import { Review, Property } from './interfaces' 
 
 const propertyContainer = document.querySelector('.properties')
+const reviewContainer = document.querySelector('.reviews')
+const container = document.querySelector('.container')
+const button = document.querySelector('button')
 const footer = document.querySelector('.footer')
 
 let isLoggedIn: boolean
@@ -31,7 +34,6 @@ const reviews: Review[] = [
         stars: 4,
         loyaltyUser: LoyaltyUser.SILVER_USER,
         date: '27-03-2021',
-        description: 'Great hosts, location was a bit further than said'
     },
 ]
 
@@ -46,23 +48,11 @@ const you = {
 }
 
 // properties
-const properties : {
-    image: string;
-    title: string;
-    price: number;
-    location: {
-        firstLine: string;
-        city: string;
-        postcode: number;
-        country: Country;
-    };
-    contact: [number, string];
-    isAvailable: boolean;
-}[] = [
+const properties : Property[] = [
     {
         image: './images/apartment.jpg',
         title: 'Jozi Retreat',
-        price: 42,
+        price: 45,
         location: {
             firstLine: 'unit 42',
             city: 'Johannesburg',
@@ -97,6 +87,19 @@ const properties : {
     },
     contact: [+271234567890, 'john@gmail.com'],
     isAvailable: true
+},
+{
+    image: './images/malaysian-hotel.jpg',
+    title: 'Malia Hotel',
+    price: 35,
+    location: {
+        firstLine: 'Room 4',
+        city: 'Malia',
+        postcode: 45334,
+        country: 'Malaysia'
+    },
+    contact: [+60349822083, 'lee34@gmail.com'],
+    isAvailable: false
 }
 ]
 
@@ -163,3 +166,18 @@ class MainImage {
         this.reviews = reviews
     }
 }
+
+let yourMainImage = new MainImage(
+    './images/modern-mansion.jpg', 
+    'Modern Mansion',
+    [{
+        name: 'Sally',
+        stars: 5,
+        loyaltyUser: LoyaltyUser.GOLD_USER,
+        date: '20-11-2024'
+    }] )
+
+const mainImageContainer = document.querySelector('.main-image')
+const image = document.createElement('img')
+image.setAttribute('src', yourMainImage.src)
+mainImageContainer.appendChild(image)
