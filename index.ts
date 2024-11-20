@@ -7,11 +7,11 @@ import { Permissions, LoyaltyUser } from './enums'
 import { Review, Property } from './interfaces' 
 import MainImage from './classes' // single export - export default
 
-const propertyContainer = document.querySelector('.properties')
-const reviewContainer = document.querySelector('.reviews')
-const container = document.querySelector('.container')
-const button = document.querySelector('button')
-const footer = document.querySelector('.footer')
+const propertyContainer = document.querySelector('.properties') as HTMLDivElement
+const reviewContainer = document.querySelector('.reviews') as HTMLDivElement
+const container = document.querySelector('.container') as HTMLDivElement
+const button = document.querySelector('button') as HTMLButtonElement
+const footer = document.querySelector('.footer') as HTMLDivElement
 
 let isLoggedIn: boolean
  
@@ -166,7 +166,7 @@ let yourMainImage = new MainImage(
         date: '20-11-2024'
     }] )
 
-const mainImageContainer = document.querySelector('.main-image')
+const mainImageContainer = document.querySelector('.main-image') as HTMLDivElement
 const image = document.createElement('img')
 image.setAttribute('src', yourMainImage.src)
 mainImageContainer.appendChild(image)
