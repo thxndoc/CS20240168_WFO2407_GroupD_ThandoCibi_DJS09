@@ -2,10 +2,10 @@
 // Write a function that will only accept numbers and attend to 
 // all TypeScript weakness flags.
 // : number
-import { showReviewTotal, populateUser, getTopTwoReviews } from './utils'
-import { Permissions, LoyaltyUser } from './enums'
+import { showReviewTotal, populateUser, getTopTwoReviews } from './utils' // multiple exports - import exactly as is in file
+import { Permissions, LoyaltyUser } from './enums' // same as above comment - multiple exports
 import { Price, Country } from './types'
-import Review from './interfaces' // export default
+import Review from './interfaces' // export default - can name it whatever
 
 const propertyContainer = document.querySelector('.properties')
 const footer = document.querySelector('.footer')
@@ -151,3 +151,15 @@ button.addEventListener('click', () => addReviews(reviews))
 
 let currentLocation: [string, string, number] = ['Johannesburg', '20:30', 21]
 footer.innerHTML = `${currentLocation[0]} ${currentLocation[1]} ${currentLocation[2]}℃`
+
+// classes
+class MainImage {
+    src: string
+    title: string
+    reviews: Review[]
+    constructor(src: string, title: string, reviews: Review[]) {
+        this.src = src
+        this.title = title
+        this.reviews = reviews
+    }
+}
