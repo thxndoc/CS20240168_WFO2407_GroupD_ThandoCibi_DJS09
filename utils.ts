@@ -29,12 +29,12 @@ export function makeMultiple(value: number) : string {
 export function getTopTwoReviews(reviews: {
     name: string;
     stars: number;
-    loyalyuser: LoyaltyUser;
+    loyaltyuser: LoyaltyUser;
     date: string;
 }[]) : {
     name: string;
     stars: number;
-    loyalyuser: LoyaltyUser;
+    loyaltyuser: LoyaltyUser;
     date: string;  
 }[]  {
  const sortedReviews = reviews.sort((a, b) => b.stars - a.stars)
