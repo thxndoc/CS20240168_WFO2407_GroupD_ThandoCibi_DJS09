@@ -5,7 +5,7 @@
 import { showReviewTotal, populateUser, getTopTwoReviews } from './utils'
 import { Permissions, LoyaltyUser } from './enums'
 import { Price, Country } from './types'
-import { Review } from './interfaces'
+import Review from './interfaces' // export default
 
 const propertyContainer = document.querySelector('.properties')
 const footer = document.querySelector('.footer')
