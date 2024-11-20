@@ -45,6 +45,10 @@ body {
     box-shadow: rgb(0 0 0 / 12%) 0 1px 8px;
 }
 
+.card img {
+    width: 100%;
+}
+
 .footer {
     width: 100%;
     background-color: lightcoral;
