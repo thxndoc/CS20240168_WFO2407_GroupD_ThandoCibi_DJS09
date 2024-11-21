@@ -153,7 +153,7 @@ function addReviews(array: Review[] ) : void {
 button.addEventListener('click', () => addReviews(reviews))
 
 let currentLocation: [string, string, number] = ['Johannesburg', '20:30', 21]
-footer.innerHTML = `${currentLocation[0]} ${currentLocation[1]} ${currentLocation[2]}℃`
+footer.innerHTML = `${currentLocation[0]} ${currentLocation[1]} ${currentLocation[2]}°C`
 
 
 let yourMainImage = new MainImage(
